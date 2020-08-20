@@ -3,6 +3,8 @@
 #Date:2020-8-20
 import numpy as np
 
+#记录一个很蠢的bug:在corpus最后加了回车，用ord()计算ascll码时报错 IndexError: string index out of range
+
 def loadArticle(fileName):
 
     #初始化文章列表
@@ -137,10 +139,8 @@ def participle(article, A, B, PI):
 if __name__ == '__main__':
     #trian
     A, B, PI = trainModel('file/pku_training.utf8')
-    #A, B, PI = trainModel('file/HMMTrainSet.txt')
 
     artical = loadArticle('file/pku_test.utf8')
-    #artical = loadArticle('file/testArtical.txt')
 
     #test
     partiArtical = participle(artical, A, B, PI)
