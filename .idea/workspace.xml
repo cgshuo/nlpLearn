@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6590ffba-9928-4987-bf45-68cc90638af2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/HMM.py" afterPath="$PROJECT_DIR$/HMM.py" />
-      <change beforePath="$PROJECT_DIR$/file/HMMTrainSet.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/file/pku_test.utf8" afterPath="$PROJECT_DIR$/file/pku_test.utf8" />
-      <change beforePath="$PROJECT_DIR$/file/testArtical.txt" afterPath="" />
-    </list>
+    <list default="true" id="6590ffba-9928-4987-bf45-68cc90638af2" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
