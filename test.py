@@ -1,6 +1,11 @@
 import jieba
 import numpy as np
 import pandas as pd
+delat = [[0 for i in range(4)] for i in range(3)]
+print(delat)
+for i in range(4):
+    delat[0][i] +=1
+print(delat)
 key_value = {}
 df1=[]
 df1 = pd.DataFrame(df1)
