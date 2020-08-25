@@ -6,6 +6,7 @@
 
 import numpy as np
 import tensorflow
+from cnews_loader import read_category, read_vocab, process_file
 """
     构建一个隐层的BPNN 
     输出为5个分类
@@ -148,4 +149,25 @@ def BPNN_model(X, Y, h_n, input_n, output_n, num_iterations=10000, print_cost=Fa
 
     return parameters
 
-def
+def load_data(vocab_dir):
+    """
+    返回单词以及类别id，为构建矩阵作准备
+    :param vocab_dir: 词汇表
+    :return:  words, word_to_id, categories, cat_to_id
+    """
+    words, word_to_id = read_vocab(vocab_dir)
+    categories, cat_to_id = read_category()
+    # vocab_size = len(words)
+    return words, word_to_id, categories, cat_to_id
+
+if __name__ == "__main__":
+    test_dir = 'file/cnews/test.csv'
+    vocab_dir = 'file/cnews/vocab.txt'
+    train_dir = 'file/cnews/train.csv'
+
+    words, word_to_id, categories, cat_to_id = load_data(vocab_dir)
+
+    x_pad, y_pad = process_file(train_dir, word_to_id, cat_to_id, max_length=600)
+
+
+
