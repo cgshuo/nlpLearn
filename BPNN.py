@@ -5,7 +5,7 @@
 # @File: BPNN.py
 
 import numpy as np
-import tensorflow
+import datetime
 from cnews_loader import read_category, read_vocab, process_file
 """
     构建一个隐层的BPNN 
@@ -24,7 +24,7 @@ def initialize_parameters(x_n, h_n, y_n):
     w1 = np.random.randn(h_n, x_n) * 0.01  # randn()使随机值服从高斯分布
     b1 = np.zeros((h_n, 1))
     w2 = np.random.randn(y_n, h_n) * 0.01 # y*h 一个y需要h个w2
-    b2 = np.zeros(y_n, 1)
+    b2 = np.zeros((y_n, 1))
 
     #通过字典存储参数
     parameters = {'w1': w1, 'b1': b1, 'w2': w2, 'b2': b2}
@@ -149,6 +149,56 @@ def BPNN_model(X, Y, h_n, input_n, output_n, num_iterations=10000, print_cost=Fa
 
     return parameters
 
+def predict(parameters, x_test, y_test):
+    """
+    6。模型评估
+    :param parameters:
+    :param x_test:
+    :param y_test:
+    :return: 预测结果
+    """
+    w1 = parameters['w1']
+    b1 = parameters['b1']
+    w2 = parameters['w2']
+    b2 = parameters['b2']
+
+    z1 = np.dot(w1, x_test) + b1
+    a1 = np.tanh(z1)
+    z2 = np.dot(w2, a1) + b2
+    a2 = 1 / (1 + np.exp(-z2))
+
+    # 结果的维度
+    n_rows = y_test.shape[0]
+    n_cols = y_test.shape[1]
+
+    # 预测值结果存储
+    output = np.empty(shape=(n_rows, n_cols), dtype=int)
+
+    for i in range(n_rows):
+        for j in range(n_cols):
+            if a2[i][j] > 0.5:
+                output[i][j] = 1
+            else:
+                output[i][j] = 0
+
+    print('预测结果：')
+    print(output)
+    print('真实结果：')
+    print(y_test)
+
+    count = 0
+    for k in range(0, n_cols):
+        if output[0][k] == y_test[0][k] and output[1][k] == y_test[1][k] and output[2][k] == y_test[2][k]:
+            count = count + 1
+        else:
+            print(k)
+
+    acc = count / int(y_test.shape[1]) * 100
+    print('准确率：%.2f%%' % acc)
+
+    return output
+
+
 def load_data(vocab_dir):
     """
     返回单词以及类别id，为构建矩阵作准备
@@ -168,6 +218,21 @@ if __name__ == "__main__":
     words, word_to_id, categories, cat_to_id = load_data(vocab_dir)
 
     x_pad, y_pad = process_file(train_dir, word_to_id, cat_to_id, max_length=600)
+    x_test, y_test = process_file(test_dir, word_to_id, cat_to_id, max_length=600)
 
+    X = x_pad.T
+    Y = y_pad.T
+    x_test = x_test.T
+    y_test = y_test.T
+
+    # 开始训练
+    start_time = datetime.datetime.now()
+    parameters = BPNN_model(X, Y, h_n=10, input_n=X.shape[0], output_n=5, num_iterations=10000, print_cost=True)
+    end_time = datetime.datetime.now()
+    print("用时：" + str((end_time - start_time).seconds) + 's' + str(
+        round((end_time - start_time).microseconds / 1000)) + 'ms')
+
+    # 对模型进行测试
+    result = predict(parameters, x_test, y_test)
 
 
