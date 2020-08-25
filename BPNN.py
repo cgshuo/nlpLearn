@@ -5,6 +5,7 @@
 # @File: BPNN.py
 
 import numpy as np
+import tensorflow
 """
     构建一个隐层的BPNN 
     输出为5个分类
@@ -147,3 +148,4 @@ def BPNN_model(X, Y, h_n, input_n, output_n, num_iterations=10000, print_cost=Fa
 
     return parameters
 
+def
