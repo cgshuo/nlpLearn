@@ -9,6 +9,7 @@ import datetime
 from cnews_loader import read_category, read_vocab, process_file
 """
     构建一个隐层的BPNN 
+    leading rate 设置0.6 隐层高度设置为3 迭代次数设置为1000
     输出为5个分类
 """
 
@@ -95,7 +96,7 @@ def backward_propagation(parameters, cache, X, Y):
 
     return grads
 
-def update_parameters(parameters, grads, learning_rate=0.01):
+def update_parameters(parameters, grads, learning_rate):
     """
     5。更新参数，梯度下降求局部极值
     :param parameters: (w,b)
@@ -124,7 +125,7 @@ def update_parameters(parameters, grads, learning_rate=0.01):
 
     return parameters
 
-def BPNN_model(X, Y, h_n, input_n, output_n, num_iterations=10000, print_cost=False):
+def BPNN_model(X, Y, h_n, input_n, output_n, learning_rate, num_iterations=10000, print_cost=False):
     np.random.seed(3)
     x_n = input_n   #输入层节点数
     y_n = output_n  #输出层节点数
@@ -141,11 +142,11 @@ def BPNN_model(X, Y, h_n, input_n, output_n, num_iterations=10000, print_cost=Fa
         # 4。反向传播
         grads = backward_propagation(parameters, cache, X, Y)
         # 5。更新参数
-        parameters = update_parameters(parameters, grads)
+        parameters = update_parameters(parameters, grads, learning_rate)
 
         #每1000次迭代，输出一次损失函数 损失函数值越小，模型越好
-        if print_cost and i % 1000 == 0:
-            print('迭代第%i次，代价函数为：%f' % (i, cost))
+        if print_cost and i % 10 == 0:
+            print('迭代第%i次，损失函数为：%f' % (i, cost))
 
     return parameters
 
@@ -190,8 +191,8 @@ def predict(parameters, x_test, y_test):
     for k in range(0, n_cols):
         if output[0][k] == y_test[0][k] and output[1][k] == y_test[1][k] and output[2][k] == y_test[2][k]:
             count = count + 1
-        else:
-            print(k)
+        # else:
+        #     print(k)
 
     acc = count / int(y_test.shape[1]) * 100
     print('准确率：%.2f%%' % acc)
@@ -224,19 +225,18 @@ if __name__ == "__main__":
     Y = y_pad.T
     x_test = x_test.T
     y_test = y_test.T
-    print(Y)
-    print(y_test)
 
-    print(X.shape[0])
+    learning_rate = 1
 
+    print("---------------start------------------------")
     # 开始训练
     start_time = datetime.datetime.now()
-    parameters = BPNN_model(X, Y, h_n=5500, input_n=X.shape[0], output_n=Y.shape[0], num_iterations=3, print_cost=True)
+    parameters = BPNN_model(X, Y, h_n=4, input_n=X.shape[0], output_n=Y.shape[0], learning_rate=learning_rate, num_iterations=1000, print_cost=True)
     end_time = datetime.datetime.now()
     print("用时：" + str((end_time - start_time).seconds) + 's' + str(
         round((end_time - start_time).microseconds / 1000)) + 'ms')
 
     # 对模型进行测试
     result = predict(parameters, x_test, y_test)
-
+    print("-----------------end------------------------")
 
