@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6590ffba-9928-4987-bf45-68cc90638af2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/cnews_loader.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/file/神经网络文本分类数据集/cnews.vocab.txt" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/nlpLearn.iml" afterPath="$PROJECT_DIR$/.idea/nlpLearn.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/BPNN.py" afterPath="$PROJECT_DIR$/BPNN.py" />
-      <change beforePath="$PROJECT_DIR$/file/神经网络文本分类数据集/dev.csv" afterPath="$PROJECT_DIR$/file/神经网络文本分类数据集/dev.csv" />
-      <change beforePath="$PROJECT_DIR$/file/神经网络文本分类数据集/train.csv" afterPath="$PROJECT_DIR$/file/神经网络文本分类数据集/train.csv" />
+      <change beforePath="$PROJECT_DIR$/cnews_loader.py" afterPath="$PROJECT_DIR$/cnews_loader.py" />
+      <change beforePath="$PROJECT_DIR$/file/神经网络文本分类数据集/cnews.vocab.txt" afterPath="$PROJECT_DIR$/file/cnews/vocab.txt" />
+      <change beforePath="$PROJECT_DIR$/file/神经网络文本分类数据集/dev.csv" afterPath="$PROJECT_DIR$/file/cnews/dev.csv" />
+      <change beforePath="$PROJECT_DIR$/file/神经网络文本分类数据集/labels.txt" afterPath="$PROJECT_DIR$/file/cnews/labels.txt" />
+      <change beforePath="$PROJECT_DIR$/file/神经网络文本分类数据集/test.csv" afterPath="$PROJECT_DIR$/file/cnews/test.csv" />
+      <change beforePath="$PROJECT_DIR$/file/神经网络文本分类数据集/train.csv" afterPath="$PROJECT_DIR$/file/cnews/train.csv" />
+      <change beforePath="$PROJECT_DIR$/file/神经网络文本分类数据集/哈工大停用词表.txt" afterPath="$PROJECT_DIR$/file/cnews/哈工大停用词表.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,7 +22,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="dev.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file/神经网络文本分类数据集/dev.csv">
+        <entry file="file://$PROJECT_DIR$/file/cnews/dev.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
             <state relative-caret-position="90000">
               <caret line="5000" column="23" lean-forward="false" selection-start-line="5000" selection-start-column="23" selection-end-line="5000" selection-end-column="23" />
@@ -34,10 +35,10 @@
         </entry>
       </file>
       <file leaf-file-name="train.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file/神经网络文本分类数据集/train.csv">
+        <entry file="file://$PROJECT_DIR$/file/cnews/train.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="665">
-              <caret line="40000" column="19" lean-forward="false" selection-start-line="40000" selection-start-column="19" selection-end-line="40000" selection-end-column="19" />
+            <state relative-caret-position="-395283">
+              <caret line="18023" column="0" lean-forward="false" selection-start-line="18023" selection-start-column="0" selection-end-line="18023" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -46,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BPNN.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BPNN.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BPNN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="144" column="25" lean-forward="false" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+            <state relative-caret-position="411">
+              <caret line="170" column="0" lean-forward="true" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
               <folding>
                 <element signature="e#112#130#0" expanded="true" />
               </folding>
@@ -58,11 +59,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cnews_loader.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vocab.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/file/cnews/vocab.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cnews_loader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cnews_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="857">
-              <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+            <state relative-caret-position="-104">
+              <caret line="111" column="79" lean-forward="false" selection-start-line="111" selection-start-column="79" selection-end-line="111" selection-end-column="79" />
               <folding>
                 <element signature="e#119#129#0" expanded="true" />
               </folding>
@@ -101,7 +112,7 @@
         </entry>
       </file>
       <file leaf-file-name="test.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file/神经网络文本分类数据集/test.csv">
+        <entry file="file://$PROJECT_DIR$/file/cnews/test.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -114,7 +125,7 @@
         </entry>
       </file>
       <file leaf-file-name="labels.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/file/神经网络文本分类数据集/labels.txt">
+        <entry file="file://$PROJECT_DIR$/file/cnews/labels.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="2" />
@@ -151,11 +162,11 @@
         <option value="$PROJECT_DIR$/file/testArtical.txt" />
         <option value="$PROJECT_DIR$/file/pku_test.utf8" />
         <option value="$PROJECT_DIR$/HMM.py" />
-        <option value="$PROJECT_DIR$/BPNN.py" />
         <option value="$PROJECT_DIR$/file/神经网络文本分类数据集/dev.csv" />
         <option value="$PROJECT_DIR$/file/神经网络文本分类数据集/train.csv" />
         <option value="$PROJECT_DIR$/BPNN_dataSet.py" />
         <option value="$PROJECT_DIR$/cnews_loader.py" />
+        <option value="$PROJECT_DIR$/BPNN.py" />
       </list>
     </option>
   </component>
@@ -215,7 +226,7 @@
               <item name="nlpLearn" type="b2602c69:ProjectViewProjectNode" />
               <item name="nlpLearn" type="462c0819:PsiDirectoryNode" />
               <item name="file" type="462c0819:PsiDirectoryNode" />
-              <item name="神经网络文本分类数据集" type="462c0819:PsiDirectoryNode" />
+              <item name="cnews" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -229,6 +240,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/file/cnews" />
       <recent name="$PROJECT_DIR$/file/神经网络文本分类数据集" />
       <recent name="$PROJECT_DIR$/file" />
     </key>
@@ -245,7 +257,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.HMM">
+  <component name="RunManager" selected="Python.BPNN">
+    <configuration name="BPNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/python.app/Contents/MacOS/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="nlpLearn" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BPNN.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="HMM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -300,24 +330,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="_kmeans_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/python.app/Contents/MacOS/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="nlpLearn" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/_kmeans_dataset.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -336,7 +348,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="cnews_loader" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -348,26 +360,26 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="nlpLearn" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cnews_loader.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python._kmeans_dataset" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.HMM" />
-      <item index="3" class="java.lang.String" itemvalue="Python.HMMPKU" />
-      <item index="4" class="java.lang.String" itemvalue="Python.HMMPKU (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.HMM" />
+      <item index="1" class="java.lang.String" itemvalue="Python.HMMPKU" />
+      <item index="2" class="java.lang.String" itemvalue="Python.HMMPKU (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.BPNN" />
+      <item index="4" class="java.lang.String" itemvalue="Python.cnews_loader" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.HMM" />
-        <item index="1" class="java.lang.String" itemvalue="Python.HMMPKU" />
-        <item index="2" class="java.lang.String" itemvalue="Python.HMMPKU (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test" />
-        <item index="4" class="java.lang.String" itemvalue="Python._kmeans_dataset" />
+        <item index="0" class="java.lang.String" itemvalue="Python.BPNN" />
+        <item index="1" class="java.lang.String" itemvalue="Python.cnews_loader" />
+        <item index="2" class="java.lang.String" itemvalue="Python.HMM" />
+        <item index="3" class="java.lang.String" itemvalue="Python.HMMPKU" />
+        <item index="4" class="java.lang.String" itemvalue="Python.HMMPKU (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -394,7 +406,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3700121" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45949215" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -419,14 +431,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HMM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/opt/anaconda3/lib/python3.7/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5760">
@@ -743,7 +747,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file/神经网络文本分类数据集/dev.csv">
+    <entry file="file://$PROJECT_DIR$/file/cnews/dev.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="90000">
           <caret line="5000" column="23" lean-forward="false" selection-start-line="5000" selection-start-column="23" selection-end-line="5000" selection-end-column="23" />
@@ -754,25 +758,6 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file/神经网络文本分类数据集/train.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="665">
-          <caret line="40000" column="19" lean-forward="false" selection-start-line="40000" selection-start-column="19" selection-end-line="40000" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/file/神经网络文本分类数据集/labels.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file/神经网络文本分类数据集/cnews.test.txt">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="180">
@@ -780,7 +765,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file/神经网络文本分类数据集/test.csv">
+    <entry file="file://$PROJECT_DIR$/file/cnews/test.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -791,22 +776,49 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BPNN.py">
+    <entry file="file://$PROJECT_DIR$/file/cnews/vocab.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="144" column="25" lean-forward="false" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
-          <folding>
-            <element signature="e#112#130#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/cnews/labels.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/file/cnews/train.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="-395283">
+          <caret line="18023" column="0" lean-forward="false" selection-start-line="18023" selection-start-column="0" selection-end-line="18023" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cnews_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="857">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        <state relative-caret-position="-104">
+          <caret line="111" column="79" lean-forward="false" selection-start-line="111" selection-start-column="79" selection-end-line="111" selection-end-column="79" />
           <folding>
             <element signature="e#119#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BPNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="170" column="0" lean-forward="true" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+          <folding>
+            <element signature="e#112#130#0" expanded="true" />
           </folding>
         </state>
       </provider>
