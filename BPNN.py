@@ -95,7 +95,7 @@ def backward_propagation(parameters, cache, X, Y):
 
     return grads
 
-def update_parameters(parameters, grads, learning_rate=0.4):
+def update_parameters(parameters, grads, learning_rate=0.01):
     """
     5。更新参数，梯度下降求局部极值
     :param parameters: (w,b)
@@ -217,17 +217,21 @@ if __name__ == "__main__":
 
     words, word_to_id, categories, cat_to_id = load_data(vocab_dir)
 
-    x_pad, y_pad = process_file(train_dir, word_to_id, cat_to_id, max_length=600)
-    x_test, y_test = process_file(test_dir, word_to_id, cat_to_id, max_length=600)
+    x_pad, y_pad = process_file(train_dir, word_to_id, cat_to_id, max_length=5000)
+    x_test, y_test = process_file(test_dir, word_to_id, cat_to_id, max_length=5000)
 
     X = x_pad.T
     Y = y_pad.T
     x_test = x_test.T
     y_test = y_test.T
+    print(Y)
+    print(y_test)
+
+    print(X.shape[0])
 
     # 开始训练
     start_time = datetime.datetime.now()
-    parameters = BPNN_model(X, Y, h_n=10, input_n=X.shape[0], output_n=5, num_iterations=10000, print_cost=True)
+    parameters = BPNN_model(X, Y, h_n=5500, input_n=X.shape[0], output_n=Y.shape[0], num_iterations=3, print_cost=True)
     end_time = datetime.datetime.now()
     print("用时：" + str((end_time - start_time).seconds) + 's' + str(
         round((end_time - start_time).microseconds / 1000)) + 'ms')
