@@ -145,7 +145,7 @@ def BPNN_model(X, Y, h_n, input_n, output_n, learning_rate, num_iterations=10000
         parameters = update_parameters(parameters, grads, learning_rate)
 
         #每1000次迭代，输出一次损失函数 损失函数值越小，模型越好
-        if print_cost and i % 10 == 0:
+        if print_cost and i % 100 == 0:
             print('迭代第%i次，损失函数为：%f' % (i, cost))
 
     return parameters
@@ -182,10 +182,10 @@ def predict(parameters, x_test, y_test):
             else:
                 output[i][j] = 0
 
-    print('预测结果：')
-    print(output)
-    print('真实结果：')
-    print(y_test)
+    # print('预测结果：')
+    # print(output)
+    # print('真实结果：')
+    # print(y_test)
 
     count = 0
     for k in range(0, n_cols):
@@ -212,9 +212,9 @@ def load_data(vocab_dir):
     return words, word_to_id, categories, cat_to_id
 
 if __name__ == "__main__":
-    test_dir = 'file/cnews/test.csv'
+    test_dir = 'file/cnews/cnews.test.txt'
     vocab_dir = 'file/cnews/vocab.txt'
-    train_dir = 'file/cnews/train.csv'
+    train_dir = 'file/cnews/cnews.train.txt'
 
     words, word_to_id, categories, cat_to_id = load_data(vocab_dir)
 
@@ -226,12 +226,13 @@ if __name__ == "__main__":
     x_test = x_test.T
     y_test = y_test.T
 
-    learning_rate = 1
+    learning_rate = 1e-3
+    num_interantion = 1000
 
     print("---------------start------------------------")
     # 开始训练
     start_time = datetime.datetime.now()
-    parameters = BPNN_model(X, Y, h_n=4, input_n=X.shape[0], output_n=Y.shape[0], learning_rate=learning_rate, num_iterations=1000, print_cost=True)
+    parameters = BPNN_model(X, Y, h_n=128, input_n=X.shape[0], output_n=Y.shape[0], learning_rate=learning_rate, num_iterations=num_interantion, print_cost=True)
     end_time = datetime.datetime.now()
     print("用时：" + str((end_time - start_time).seconds) + 's' + str(
         round((end_time - start_time).microseconds / 1000)) + 'ms')
