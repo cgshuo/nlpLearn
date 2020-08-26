@@ -227,7 +227,7 @@ if __name__ == "__main__":
     y_test = y_test.T
 
     learning_rate = 1e-3
-    num_interantion = 1000
+    num_interantion = 100
 
     print("---------------start------------------------")
     # 开始训练
